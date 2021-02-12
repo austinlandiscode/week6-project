@@ -43,9 +43,9 @@ OR
 * Enter your email address and click 'Get Free Key!'
 * You'll be prompted to create an account with your email, first name and a password. Agree to the terms of use and click 'Get Started!'
 * At this point, you'll be able to access a dashboard that includes your API key as well as your remaining API calls for the month.
-* Navigate to your projects root directory and create a .env
+* Navigate to your projects root directory and create a .env file.
 * You will need to store your API Key in a .env file like in a variable like so API_KEY ='api-key'
-* Add .env to your .gitignore so that your API Key does not become public knowledge when you push to your projects repository.
+* Add your .env file to your .gitignore so that your API Key does not become public knowledge when you push to your projects repository.
 
 
 ## Known Bugs
