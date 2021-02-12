@@ -2,13 +2,25 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import $ from 'jquery';
+import ExchangeRate from './exchange.js';
 
-$('#money').click(function() {
-  const inputtedNumber = parseInt($('#usd').val());
-  $('#usd').val("");
+let promise = ExchangeRate.sortCurrency();
+promise.then(function(response) {
+  
+})
+
+
+$(document).ready(function(event) {
+  event.preventDefault();
+  $('#money').click(function() {
+    let inputtedNumber = parseInt($('#usd').val());
+    $('#usd').val("");
+    let convert = $('#currency').val();
+    console.log(inputtedNumber);
+  });
 });
-
-  let promise = new Promise(function(resolve, reject) {
-    let request = new XMLHttpRequest();
-    const url = `https://v6.exchangerate-api.com/v6/8e9efc30f78ccf1b8a7da89c/latest/USD`
+  
+  promise.then(function(response) {
+    const body = JSON.parse(response);
+    $('#answer').text(`the conversation of ${inputtedNumber}USD and ${convert}`)
   });
