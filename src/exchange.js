@@ -1,8 +1,8 @@
 export default class ExchangeRate {
-  static convertCurrency(convertedCurrency, inputtedNumber) {
+  static convertCurrency(convertedCurrency, convertedCurrencyTwo, inputtedNumber) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      const url = `https://v6.exchangerate-api.com/v6/8e9efc30f78ccf1b8a7da89c/pair/USD/${convertedCurrency}/${inputtedNumber}`;
+      const url = `https://v6.exchangerate-api.com/v6/8e9efc30f78ccf1b8a7da89c/pair/${convertedCurrency}/${convertedCurrencyTwo}/${inputtedNumber}`;
 
       request.onload = function() {
         if (this.status === 200) {
