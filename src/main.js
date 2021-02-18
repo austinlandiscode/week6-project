@@ -5,7 +5,8 @@ import $ from 'jquery';
 import ExchangeRate from './exchange.js';
 
 $(document).ready(function() {
-  $('#money').submit(function() {
+  $('#money').click(function() {
+    event.preventDefault();
     let convertedCurrency = $('#currency1').val();
     let inputtedNumber = parseInt($('#usd').val());
     let convertedCurrencyTwo = $('#currency2').val();
