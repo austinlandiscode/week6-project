@@ -37,6 +37,7 @@ OR
 * Run ```npm init -y```
 * Run ```npm install```
 * Verify install works by running ```npm run test``` and ```npm run build```
+* To open your project in a browser, perform ```npm run start``` in your terminal
 
 ## API_KEY Acquisition and Management
 * Go to https://www.exchangerate-api.com/
